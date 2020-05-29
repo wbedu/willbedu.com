@@ -2,13 +2,13 @@ import React from 'react';
 
 export default class Projects extends React.Component{
     componentDidMount(){
-        document.title = "Will Bedu | Projects"
+        document.title = "WB| Projects"
     }
     render() {
         return (
-           <div>
+           <main>
                Projects
-           </div>
+           </main>
         )
     }
 }

@@ -1,0 +1,18 @@
+@import "./colors.css";
+
+
+body{
+    background-color: var(--quaternary-color);
+    font-family: "Avenir Next" !important;
+    color: var(--tertiary-color);
+}
+
+main{
+    margin: 50px auto auto 125px;
+}
+ 
+@media screen and (max-width: 1024px) {
+    main{
+        margin: 25px auto auto 25px !important;
+    }
+}
