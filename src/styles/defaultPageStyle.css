@@ -8,12 +8,12 @@ body{
 }
 
 main{
-    margin: 25px 25px 25px 25px
+    margin: 25px 25px 25px 125px
 }
  
 @media screen and (max-width: 1024px) {
     main{
-        margin:auto auto !important;
+        margin:25px auto auto 25px !important;
     }
 }
 
