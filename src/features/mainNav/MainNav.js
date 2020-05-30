@@ -19,7 +19,7 @@ export default function MainNav() {
                         <Nav.Link className={"gradientNavLink navbar-link"} href="/">Home</Nav.Link>
                         <Nav.Link className={"gradientNavLink navbar-link"} href="/projects">Projects</Nav.Link>
                         <Nav.Link className={"gradientNavLink navbar-link"} href="/blog">Blog</Nav.Link>
-                        <Nav.Link className={"gradientNavLink navbar-link"} href="/blog">Resume</Nav.Link>
+                        <Nav.Link className={"gradientNavLink navbar-link"} href="/resume">Resume</Nav.Link>
 
                     </Nav>
                 </Navbar.Collapse>
