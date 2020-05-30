@@ -79,6 +79,7 @@
   
 .sidenav a:hover {
     color: var(--tertiary-color);
+    background-color: var(--secondary-color);
 }
  
 @media screen and (max-width: 1024px) {
