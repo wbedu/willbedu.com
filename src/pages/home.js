@@ -6,7 +6,7 @@ import { faGithub, faLinkedinIn, } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from 'react-bootstrap';
-import './homePage.css'
+import './home.css'
 
 export default class Home extends React.Component {
     componentDidMount() {
@@ -15,9 +15,9 @@ export default class Home extends React.Component {
     render() {
         return (
             <main style={{ display: "flex", justifyContent: "center" }}>
-                <CustomCard className="col-6 center" style={{ padding: "10px", top: "50px", height: "350px", color: Colors.primary }}>
+                <CustomCard className="col-lg-6 col-sm-10 col-md-10 center" style={{ padding: "10px", top: "50px", height: "350px", color: Colors.primary }}>
                     <h2>Will Bedu</h2>
-                    <p>Developer, Engineer, Architech</p>
+                    <p>Developer, Engineer, Architect</p>
                     <div className="socials">
                         <Button className={"media-button"}
                             href="https://github.com/wbedu"

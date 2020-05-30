@@ -10,6 +10,7 @@ import MainNav from "./features/mainNav/MainNav";
 import Home from "./pages/home";
 import Projects from "./pages/projects";
 import Blog from "./pages/blog";
+import Resume from './pages/resume';
 ReactDOM.render(
     <Provider store={store}>
         <MainNav/>
@@ -17,6 +18,7 @@ ReactDOM.render(
             <Route exact path='/' component={Home}/>
             <Route path='/projects' component={Projects}/>
             <Route path='/blog' component={Blog}/>
+            <Route path='/resume' component={Resume}/>
         </BrowserRouter>
     </Provider>,
     document.getElementById('root')

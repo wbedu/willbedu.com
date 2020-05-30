@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap'
-import { faIdCard, faCode, faBlog } from '@fortawesome/free-solid-svg-icons'
+import { faIdCard, faCode, faBlog, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 import NavLink from './navLink/navLink'
 import './mainNav.css'
 
@@ -46,7 +46,7 @@ export default function MainNav() {
                         borderBottomWidth: 1,
                     }}
                 />
-                <NavLink href="/blog" icon={faBlog} size="lg" text="Resume" />
+                <NavLink href="/resume" icon={faCodeBranch} size="lg" text="Resume" />
             </Nav>
         </div>
     )

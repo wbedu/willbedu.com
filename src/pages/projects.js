@@ -7,7 +7,9 @@ export default class Projects extends React.Component{
     render() {
         return (
            <main>
+               <h1>
                Projects
+               </h1>
            </main>
         )
     }
