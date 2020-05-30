@@ -1,0 +1,23 @@
+@import "../styles/colors.css";
+
+
+
+.media-button{
+    margin: 0 5px !important;
+    padding: 5px 25px !important;
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+    border: var(--tertiary-color) 1px !important;
+}
+
+
+.media-button:hover{
+    background-color: var(--tertiary-color) !important;
+    border: var(--primary-color) 1px !important;
+}
+
+.card{
+    -webkit-box-shadow: 3px 3px 20px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 20px 1px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 20px 1px rgba(0,0,0,0.75);
+}

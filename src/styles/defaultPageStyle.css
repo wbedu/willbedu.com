@@ -16,3 +16,9 @@ main{
         margin: 25px auto auto 25px !important;
     }
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

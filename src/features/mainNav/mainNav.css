@@ -1,18 +1,28 @@
 @import "../../styles/colors.css";
 
+
+.navbar-link {
+    text-align: center;
+}
+
+.navbar-toggler{
+    float: right
+}
+
 .secondary-color{
-    color: var(--secondary-color)
+    color: var(--secondary-color) !important;
 }
 
 .brand-link{
-    display: flex;
-    flex-direction: row
+    display: block;
+    text-align: center;
+    color: var(--secondary-color) !important;
 }
 
 .brand-link > p{
     width: 100%;
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
 }
 .gradientNav {
     background:  var(--primary-color) !important;
@@ -27,7 +37,6 @@
 .gradientNavLink, .dropdown-menu, .shortNav, .fullNav {
     background: var(--primary-color);
     color: var(--tertiary-color) !important;
-    text-align: center;
 }
 .gradientNavLink:hover{
     color: var(--secondary-color) !important;
@@ -62,6 +71,7 @@
 .sidenav a {
     padding: 20px 6px 6px 6px;
     text-decoration: none;
+    text-align: center;
     color: var(--secondary-color);
     display: block;
 }
