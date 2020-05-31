@@ -4,3 +4,31 @@
     --tertiary-color: #F7F7F7;
     --quaternary-color: #303841
 }
+
+.c-bg-primary{
+    background-color: var(--primary-color);
+}
+
+.c-bg-secondary{
+    background-color: var(--secondary-color);
+}
+
+.c-text-primary{
+    color: var(--primary-color);
+}
+
+.c-text-secondary{
+    color: var(--secondary-color);
+}
+
+.c-text-tertiary{
+    color: var(--tertiary-color);
+}
+
+
+.c-githubCard{
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    text-align: center;
+    width: 100% !important;
+}

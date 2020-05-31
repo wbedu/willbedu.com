@@ -1,9 +1,0 @@
-@import "../../styles/colors.css";
-
-
-.customCard{
-    background-color: var(--secondary-color);
-    color: var(--tertiary-color);
-    text-align: center;
-    width: 100% !important;
-}

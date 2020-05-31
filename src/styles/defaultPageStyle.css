@@ -1,6 +1,5 @@
 @import "./colors.css";
 
-
 body{
     background-color: var(--quaternary-color);
     font-family: "Avenir Next" !important;
@@ -21,4 +20,80 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
+
+.c-gh-card{
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    text-align: center;
+    max-height: 275px;
+    min-height: 275px;
+}
+
+.c-gh-card-title{
+    border-bottom-style: none;
+    border-bottom-width: 19px;
+    border-bottom-style: solid;
+    border-bottom-width: 6px;
+    margin-bottom: 0px;
+    height: 50px;
+}
+
+.c-gh-card-text{
+    float:left;
+    width: 75%;
+    padding: 10px;
+}
+
+.c-gh-card-icon-container{
+    border-bottom: 20px var(--tertiary-color);
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+}
+
+.c-gh-card-icon{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px;
+}
+
+/* .c-gh-card-icon:hover{
+    color: var(--primary-color);
+} */
+
+.c-gh-card-icon:last-child {
+    border-bottom-width: 0;
+    display: block;
+}
+
+.c-gh-card-icon:last-child:hover {
+    color: var(--primary-color);
+}
+
+.c-home-card{
+    text-align: center;
+    width: 100% !important;
+    padding: 50px;
+    top: 50px;
+    height: 350px;
+}
+
+.c-gh-card-body {
+    padding-top:0;
+    padding-bottom: 0;
+    height: 215px;
+}
+.c-gh-card-statbar{
+    display: block;
+    float: right;
+    border-left: 20px var(--tertiary-color);
+    border-left-style: solid;
+    border-left-width: 5px;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    height: 215px;
+}
