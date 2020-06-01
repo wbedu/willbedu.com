@@ -26,6 +26,7 @@ export default function Projects() {
                         key={`project-${project.name}`}
                         link={project.html_url}
                         stars={project.stargazers_count}
+                        updated={project.updated_at}
                         watchers={project.watchers}
                     />
                 )

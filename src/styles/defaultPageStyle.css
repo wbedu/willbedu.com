@@ -58,6 +58,10 @@ main{
     padding: 10px;
 }
 
+.c-card-update-text{
+    margin-bottom: 10px;
+}
+
 .c-gh-card-icon-container{
     height: 100%;
 }

@@ -25,6 +25,9 @@
     color: var(--tertiary-color);
 }
 
+.c-text-quaternary{
+    color: var(--quaternary-color);
+}
 
 .c-githubCard{
     background-color: var(--secondary-color);
