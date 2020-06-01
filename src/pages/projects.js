@@ -20,16 +20,7 @@ export default function Projects() {
 
             //sliced due to readonly property of github.projects
             let projects = github.projects.slice().sort(function (proj1, proj2) {
-                let res = 1
-                try {
-                    res = new Date(proj2.updated_at) - new Date(proj1.updated_at);
-                }
-                catch{
-                    console.log(proj1, proj2)
-                    console.log(proj1.updated_at, proj2.updated_at)
-                }
-
-                return res
+                return new Date(proj2.updated_at) - new Date(proj1.updated_at);
             });
 
 
@@ -43,6 +34,7 @@ export default function Projects() {
                         stars={project.stargazers_count}
                         updated={project.updated_at}
                         watchers={project.watchers}
+                        languages={project.languages}
                     />
                 )
             })

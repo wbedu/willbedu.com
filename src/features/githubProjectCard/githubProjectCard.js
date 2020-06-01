@@ -18,8 +18,13 @@ export default function GHProjectCard(props) {
             <Card.Title className={"center c-gh-card-title"}>{props.title}</Card.Title>
             <Card.Body className={"c-gh-card-body"}>
                 <div className={"c-gh-card-text text-left-align"}>
-                <p className=" mb-2 c-text-tertiary c-card-update-text">Last updated: {updateTime}</p>
+                    <p className=" mb-2 c-text-tertiary c-card-update-text">Last updated: {updateTime}</p>
                     {text}
+                    <div className="c-gh-card-language-container">
+                        {props.languages.map((language, index) => {
+                            return <Button key={`project-language-${index}`} className="c-bg-secondary c-text-primary c-gh-card-language">#{language}</Button>
+                        })}
+                    </div>
                 </div>
                 <div className="c-gh-card-statbar">
                     <div className={"c-gh-card-icon-container"}>
@@ -31,7 +36,7 @@ export default function GHProjectCard(props) {
                             <FontAwesomeIcon icon={faEye} />
                             <p>{props.watchers}</p>
                         </div>
-                        <Button href={props.link}className="c-gh-card-icon">
+                        <Button href={props.link} className="c-gh-card-icon">
                             <FontAwesomeIcon icon={faLink} />
                             <p>View code</p>
                         </Button>

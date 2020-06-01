@@ -61,7 +61,20 @@ main{
 .c-card-update-text{
     margin-bottom: 10px;
 }
+.c-gh-card-language{
+    margin: 5px;
+}
 
+.c-gh-card-language:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+
+.c-gh-card-language-container{
+    margin-top: 10px;
+}
 .c-gh-card-icon-container{
     height: 100%;
 }

@@ -3,8 +3,23 @@ import config from '../config.json'
 import githubAPI from '../apis/githubAPI'
 
 const getProjects = async () => {
-  const results = await githubAPI.getProjects(config.github.username);
-  return results.data;
+  let projects = await githubAPI.getProjects(config.github.username)
+  const urls = projects.map(project => project.languages_url)
+
+  const languages_promises = urls.map(url => githubAPI.getLanguages(url))
+
+  await Promise.all(languages_promises).then(languages => {
+    languages.forEach((language, index) => {
+      projects[index]["languages"] = []
+      if (language) {
+        projects[index]["languages"] = Object.keys(language)
+      }
+      console.log(projects[index]["languages"])
+    })
+  });
+
+
+  return projects;
 };
 
 
