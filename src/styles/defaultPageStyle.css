@@ -112,3 +112,113 @@ main{
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+.navbar-link {
+    text-align: center;
+}
+
+.navbar-toggler{
+    float: right
+}
+
+.secondary-color{
+    color: var(--secondary-color) !important;
+}
+
+.brand-link{
+    display: block;
+    text-align: center;
+    color: var(--secondary-color) !important;
+    border-bottom: var(--secondary-color) 5px;
+    margin-bottom: 10px;
+}
+
+.brand-link > p{
+    width: 100%;
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+}
+.gradientNav {
+    background:  var(--primary-color) !important;
+    color: var(--tertiary-color) !important;
+}
+
+.nav{
+    float: right;
+    position: absolute;
+    width: 25px;
+}
+.gradientNavLink, .dropdown-menu, .shortNav, .fullNav {
+    background: var(--primary-color);
+    color: var(--tertiary-color) !important;
+}
+.gradientNavLink:hover{
+    color: var(--secondary-color) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(200,218,211, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.nav-link-text{
+    font-size: large;
+}
+.nav-link-icon{
+    font-size: x-large;
+}
+
+.shortNav {
+    display: none !important;
+}
+
+.fullNav {
+    display: inherit;
+    margin: 0;
+}
+
+.sidenav {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+.sidenav a {
+    padding: 20px 6px 6px 6px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--secondary-color);
+    display: block;
+}
+  
+.sidenav a:hover {
+    color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+}
+ 
+@media screen and (max-width: 1024px) {
+    .shortNav {
+        display: inherit !important;
+    }
+
+    .fullNav {
+        display: none !important;
+    }
+}
+
+
+*:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.hide{
+    display: none !important;
+}
