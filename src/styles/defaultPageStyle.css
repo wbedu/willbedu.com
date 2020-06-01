@@ -65,12 +65,10 @@ main{
     width: 100%;
     padding-left: 5px;
     padding-right: 5px;
-    margin: 10px;
+    margin-top:5px;
+    margin-left:10px
 }
 
-/* .c-gh-card-icon:hover{
-    color: var(--primary-color);
-} */
 
 .c-gh-card-icon:last-child {
     border-bottom-width: 0;

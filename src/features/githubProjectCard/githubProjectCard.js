@@ -12,7 +12,7 @@ export default function GHProjectCard(props) {
 
 
     return (
-        <Card className="col-lg-3 col-sm-9 col-md-6 c-bg-secondary c-text-primary c-gh-card" >
+        <Card className="col-lg-3 col-sm-9 col-md-5 c-bg-secondary c-text-primary c-gh-card" >
             <Card.Title className={"center c-gh-card-title"}>{props.title}</Card.Title>
             <Card.Body className={"c-gh-card-body"}>
                 <div className={"c-gh-card-text"}>
