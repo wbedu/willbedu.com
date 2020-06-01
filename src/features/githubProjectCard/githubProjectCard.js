@@ -4,17 +4,15 @@ import { faStar, faLink, faEye } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function GHProjectCard(props) {
-
-    let text = props.text.substring(0, 200)
-
-    if(text.length < 200){
+    let text = props.text.substring(0, 200);
+    if (text.length > 200) {
         text = text.substring(0, 196)
         text = text + "..."
-    }
+    };
 
 
     return (
-        <Card className="col-3 c-bg-secondary c-text-primary c-gh-card" >
+        <Card className="col-lg-3 col-sm-9 col-md-6 c-bg-secondary c-text-primary c-gh-card" >
             <Card.Title className={"center c-gh-card-title"}>{props.title}</Card.Title>
             <Card.Body className={"c-gh-card-body"}>
                 <div className={"c-gh-card-text"}>

@@ -1,18 +1,58 @@
 import React from 'react';
 import GHProjectCard from "../features/githubProjectCard/githubProjectCard"
+import { Spinner, Alert } from "react-bootstrap"
+import { useDispatch, useSelector } from 'react-redux';
+import { selectGithub, fetchProjects } from '../reducers/githubSlice'
 
-export default class Projects extends React.Component{
-    componentDidMount(){
-        document.title = "WB| Projects"
+export default function Projects() {
+    let body = undefined;
+    let dispatch = useDispatch();
+    const github = useSelector(selectGithub);
+    if (!github.isLoading && !github.isDone) {
+        dispatch(fetchProjects())
     }
-    render() {
-        return (
-           <main>
-               <h1>
-               Projects
-               </h1>
-               <GHProjectCard title="project1" stars="200" text={"ankstonRalphingtonIII If you add some styles to the parent element you can get rid of those annoying spaces that break the document flow. Here's a link to some solutions: [link]css-tricks.com/fighting-the-space-between-inline-block-elements [link] My personal preference is the font-size:0 trick. – Bavell Aug 18 '13 at 23:47"} />
-           </main>
+
+
+    if (github.isDone && !github.hasError) {
+        if (github.projects !== undefined && Array.isArray(github.projects)) {
+
+            body = github.projects.map(project => {
+                const description = project.description ? project.description : 'Here is where i would put my description, IF I HAD ONE!'
+                return (
+                    <GHProjectCard title={project.name}
+                        stars={project.stars}
+                        text={description}
+                        key={`project-${project.name}`}
+                        link={project.html_url}
+                        stars={project.stargazers_count}
+                        watchers={project.watchers}
+                    />
+                )
+            })
+        }
+    } else if (github.isLoading) {
+        body = (
+            <Spinner className="center" animation="border" role="status" size="lg">
+                <span className="sr-only">Loading...</span>
+            </Spinner>
+        )
+    } else if (github.hasError) {
+        body = (
+            <Alert variant="warning">
+                Error loading projects. Please try again or come back later.
+            </Alert>
         )
     }
+
+    return (
+        <main>
+            <h1>
+                Projects
+            </h1>
+
+            <div className={'c-gh-card-container col-12'}>
+                {body}
+            </div>
+        </main>
+    )
 }
