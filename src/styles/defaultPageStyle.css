@@ -33,11 +33,13 @@ main{
 
 
 .c-gh-card{
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--tertiary-color);
     text-align: center;
     max-height: 275px;
     min-height: 275px;
+    border-right: 0;
+    padding: 0;
     margin: 20px;
 }
 
@@ -57,9 +59,7 @@ main{
 }
 
 .c-gh-card-icon-container{
-    border-bottom: 20px var(--tertiary-color);
-    border-bottom-style: solid;
-    border-bottom-width: 5px;
+    height: 100%;
 }
 
 .c-gh-card-icon{
@@ -69,17 +69,30 @@ main{
     padding-left: 5px;
     padding-right: 5px;
     margin-top:5px;
-    margin-left:10px
+    margin-left:0;
+    margin-right: 0;
+    background-color: inherit;
+    border-color: inherit;
 }
 
 
 .c-gh-card-icon:last-child {
     border-bottom-width: 0;
     display: block;
+    height: 37.8%;
+    margin-top: 0px;
+    border-radius: 0 0 .25rem 0;
+    border-width: 0;
+    color: inherit;
+}
+
+.c-gh-card-icon:last-child > a {
+    color: inherit;
 }
 
 .c-gh-card-icon:last-child:hover {
-    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 .c-home-card{
@@ -91,8 +104,7 @@ main{
 }
 
 .c-gh-card-body {
-    padding-top:0;
-    padding-bottom: 0;
+    padding:0;
     height: 215px;
 }
 .c-gh-card-statbar{
@@ -104,7 +116,7 @@ main{
     width: 25%;
     margin: 0;
     padding: 0;
-    height: 215px;
+    height: 100%;
 }
 
 .c-gh-card-container{

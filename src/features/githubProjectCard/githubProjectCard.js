@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
 import { faStar, faLink, faEye } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -19,7 +19,7 @@ export default function GHProjectCard(props) {
                     {text}
                 </div>
                 <div className="c-gh-card-statbar">
-                    <div className={"gh-card-icon-container"}>
+                    <div className={"c-gh-card-icon-container"}>
                         <div className="c-gh-card-icon">
                             <FontAwesomeIcon icon={faStar} />
                             <p>{props.stars}</p>
@@ -28,10 +28,10 @@ export default function GHProjectCard(props) {
                             <FontAwesomeIcon icon={faEye} />
                             <p>{props.watchers}</p>
                         </div>
-                        <div className="c-gh-card-icon">
+                        <Button href={props.link}className="c-gh-card-icon">
                             <FontAwesomeIcon icon={faLink} />
-                            <a href={props.link}><p>see more</p></a>
-                        </div>
+                            <p>View code</p>
+                        </Button>
                     </div>
                 </div>
             </Card.Body>
