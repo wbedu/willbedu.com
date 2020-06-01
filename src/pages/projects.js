@@ -18,7 +18,22 @@ export default function Projects() {
     if (github.isDone && !github.hasError) {
         if (github.projects !== undefined && Array.isArray(github.projects)) {
 
-            body = github.projects.map(project => {
+            //sliced due to readonly property of github.projects
+            let projects = github.projects.slice().sort(function (proj1, proj2) {
+                let res = 1
+                try {
+                    res = new Date(proj2.updated_at) - new Date(proj1.updated_at);
+                }
+                catch{
+                    console.log(proj1, proj2)
+                    console.log(proj1.updated_at, proj2.updated_at)
+                }
+
+                return res
+            });
+
+
+            body = projects.map(project => {
                 const description = project.description ? project.description : 'Here is where i would put my description, IF I HAD ONE!'
                 return (
                     <GHProjectCard title={project.name}
