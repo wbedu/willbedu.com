@@ -27,6 +27,9 @@ main{
     align-items: center;
 }
 
+.text-left-align {
+    text-align: left;
+}
 
 
 .c-gh-card{
@@ -49,7 +52,7 @@ main{
 
 .c-gh-card-text{
     float:left;
-    width: 60%;
+    width: 75%;
     padding: 10px;
 }
 

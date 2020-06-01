@@ -10,6 +10,14 @@ import Home from "./pages/home";
 import Projects from "./pages/projects";
 import Blog from "./pages/blog";
 import Resume from './pages/resume';
+import aos from "aos"
+aos.init(
+    {
+        duration: 1500
+    }
+);
+
+
 ReactDOM.render(
     <Provider store={store}>
         <MainNav/>

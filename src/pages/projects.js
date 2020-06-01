@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectGithub, fetchProjects } from '../reducers/githubSlice'
 
 export default function Projects() {
+    document.title = "WB| Projects"
+
     let body = undefined;
     let dispatch = useDispatch();
     const github = useSelector(selectGithub);
@@ -20,7 +22,6 @@ export default function Projects() {
                 const description = project.description ? project.description : 'Here is where i would put my description, IF I HAD ONE!'
                 return (
                     <GHProjectCard title={project.name}
-                        stars={project.stars}
                         text={description}
                         key={`project-${project.name}`}
                         link={project.html_url}
