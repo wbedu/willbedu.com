@@ -22,7 +22,7 @@ export default function GHProjectCard(props) {
                     {text}
                     <div className="c-gh-card-language-container">
                         {props.languages.map((language, index) => {
-                            return <Button key={`project-language-${index}`} className="c-bg-secondary c-text-primary c-gh-card-language">#{language}</Button>
+                            return <Button key={`project-language-${index}`} className="c-bg-secondary c-text-primary c-gh-card-language">{language}</Button>
                         })}
                     </div>
                 </div>

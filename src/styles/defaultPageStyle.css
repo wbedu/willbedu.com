@@ -67,8 +67,8 @@ main{
 }
 
 .c-gh-card-language:hover{
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     border-color: var(--secondary-color);
 }
 
