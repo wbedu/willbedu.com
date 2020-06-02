@@ -62,7 +62,8 @@ main{
     margin-bottom: 10px;
 }
 .c-gh-card-language{
-    margin: 5px;
+    margin: 1px;
+    padding: 1px;
 }
 
 .c-gh-card-language:hover{
