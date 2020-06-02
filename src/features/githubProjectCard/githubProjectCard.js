@@ -36,7 +36,7 @@ export default function GHProjectCard(props) {
                             <FontAwesomeIcon icon={faEye} />
                             <p>{props.watchers}</p>
                         </div>
-                        <Button href={props.link} className="c-gh-card-icon">
+                        <Button href={props.link} target="_blank" className="c-gh-card-icon">
                             <FontAwesomeIcon icon={faLink} />
                             <p>View code</p>
                         </Button>
