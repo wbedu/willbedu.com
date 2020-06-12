@@ -6,7 +6,7 @@ const getProjects = async () => {
   let projects = await githubAPI.getProjects(config.github.username)
   return projects.map(project => ({
     ...project,
-    topics: project.repositoryTopics.nodes.map(node => node.map),
+    topics: project.repositoryTopics.nodes.map(node => node.topic.name),
     languages: project.languages.nodes.map(node => node.name)
   }))
 };

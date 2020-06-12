@@ -25,6 +25,7 @@ export default function Projects() {
 
             body = projects.map(project => {
                 const description = project.shortDescriptionHTML ? project.shortDescriptionHTML : 'Here is where i would put my description, IF I HAD ONE!'
+                const tags = project.languages.concat(project.topics).slice(0,5)
                 return (
                     <GHProjectCard title={project.nameWithOwner}
                         text={description}
@@ -33,7 +34,7 @@ export default function Projects() {
                         stars={project.stargazers.totalCount}
                         updated={project.updatedAt}
                         watchers={project.watchers.totalCount}
-                        languages={project.languages}
+                        tags={tags}
                     />
                 )
             })
