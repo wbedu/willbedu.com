@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/defaultPageStyle.css'
 import  './resume.css'
-import {Card} from "react-bootstrap";
+// import {Card} from "react-bootstrap";
 export default function Resume() {
     document.title = "WB| Resume"
     return (
