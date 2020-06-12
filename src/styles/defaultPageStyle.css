@@ -4,6 +4,9 @@
     main{
         left: 0 !important;
         margin: 25px !important;
+        padding-left: 0 !important;
+        width: auto !important;
+        position: relative !important;
     }
     .c-home-socials{
         justify-content: space-evenly;
