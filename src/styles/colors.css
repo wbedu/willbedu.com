@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #497775;
-    --secondary-color: #FBC926;
-    --tertiary-color: #F7F7F7;
-    --quaternary-color: #5E6B69
+    --primary-color: #e8e8e8;
+    --secondary-color: #5588a3;
+    --quaternary-color: #f7f7f7;
+    --tertiary-color: #145374;
 }
 
 .c-bg-primary{
