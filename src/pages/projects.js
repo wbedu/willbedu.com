@@ -14,26 +14,25 @@ export default function Projects() {
         dispatch(fetchProjects())
     }
 
-
     if (github.isDone && !github.hasError) {
         if (github.projects !== undefined && Array.isArray(github.projects)) {
 
             //sliced due to readonly property of github.projects
             let projects = github.projects.slice().sort(function (proj1, proj2) {
-                return new Date(proj2.updated_at) - new Date(proj1.updated_at);
+                return new Date(proj2.updatedAt) - new Date(proj1.updatedAt);
             });
 
 
             body = projects.map(project => {
-                const description = project.description ? project.description : 'Here is where i would put my description, IF I HAD ONE!'
+                const description = project.shortDescriptionHTML ? project.shortDescriptionHTML : 'Here is where i would put my description, IF I HAD ONE!'
                 return (
-                    <GHProjectCard title={project.name}
+                    <GHProjectCard title={project.nameWithOwner}
                         text={description}
-                        key={`project-${project.name}`}
-                        link={project.html_url}
-                        stars={project.stargazers_count}
-                        updated={project.updated_at}
-                        watchers={project.watchers}
+                        key={`project-${project.nameWithOwner}`}
+                        link={project.url}
+                        stars={project.stargazers.totalCount}
+                        updated={project.updatedAt}
+                        watchers={project.watchers.totalCount}
                         languages={project.languages}
                     />
                 )
