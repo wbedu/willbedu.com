@@ -30,9 +30,9 @@ body{
 
 main{
     margin: 25px 25px 25px 0;
-    left: 50px;
     position: absolute;
     width: 100%;
+    padding-left: 100px;
 }
 
 
