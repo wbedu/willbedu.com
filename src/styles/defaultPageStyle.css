@@ -6,7 +6,7 @@
         margin: 25px !important;
         padding-left: 0 !important;
         width: auto !important;
-        position: relative !important;
+        position: initial !important;
     }
     .c-home-socials{
         justify-content: space-evenly;
@@ -33,9 +33,11 @@ body{
 
 main{
     margin: 25px 25px 25px 0;
-    position: absolute;
-    width: 100%;
-    padding-left: 100px;
+    position: sticky;
+    width: -webkit-calc(100% - 125px);
+    width:    -moz-calc(100% - 125px);
+    width:         calc(100% - 125px);
+    left: 100px;
 }
 
 
@@ -45,6 +47,10 @@ main{
     align-items: center;
 }
 
+.center-item{
+    left:20%;
+    position: absolute;
+}
 .text-left-align {
     text-align: left;
 }
