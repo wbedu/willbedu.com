@@ -1,5 +1,30 @@
 @import "./colors.css";
 
+@media screen and (max-width: 1024px) {
+    main{
+        left: 0 !important;
+        margin: 25px !important;
+        padding-left: 0 !important;
+        width: auto !important;
+        position: initial !important;
+    }
+    .c-home-socials{
+        justify-content: space-evenly;
+        width: 100%;
+        display: flex;
+    }
+    .shortNav {
+        display: inherit !important;
+    }
+
+    .fullNav {
+        display: none !important;
+    }
+    .c-gh-card{
+        margin: 20px 0 0 0  !important;
+    }
+}
+
 body{
     background-color: var(--quaternary-color);
     font-family: "Avenir Next" !important;
@@ -7,19 +32,14 @@ body{
 }
 
 main{
-    margin: 25px 25px 25px 125px
+    margin: 25px 25px 25px 0;
+    position: sticky;
+    width: -webkit-calc(100% - 125px);
+    width:    -moz-calc(100% - 125px);
+    width:         calc(100% - 125px);
+    left: 100px;
 }
- 
-@media screen and (max-width: 1024px) {
-    main{
-        margin:25px auto auto 25px !important;
-    }
-    .c-home-socials{
-        justify-content: space-evenly;
-        width: 100%;
-        display: flex;
-    }
-}
+
 
 .center {
     display: flex;
@@ -27,6 +47,10 @@ main{
     align-items: center;
 }
 
+.center-item{
+    left:20%;
+    position: absolute;
+}
 .text-left-align {
     text-align: left;
 }
@@ -55,26 +79,29 @@ main{
 .c-gh-card-text{
     float:left;
     width: 75%;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
 }
 
 .c-card-update-text{
     margin-bottom: 10px;
 }
-.c-gh-card-language{
+.c-gh-card-tag{
     margin: 1px;
-    padding: 1px;
 }
 
-.c-gh-card-language:hover{
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border-color: var(--secondary-color);
+.c-gh-card-tag:hover{
+    color: var(--tertiary-color)
 }
+/*.c-gh-card-tag:hover{*/
+/*    background-color: var(--secondary-color);*/
+/*    color: var(--primary-color);*/
+/*    border-color: var(--secondary-color);*/
+/*}*/
 
 
-.c-gh-card-language-container{
+.c-gh-card-tag-container{
     margin-top: 10px;
+    overflow: hidden;
 }
 .c-gh-card-icon-container{
     height: 100%;
@@ -141,6 +168,7 @@ main{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 .navbar-link {
@@ -187,7 +215,12 @@ main{
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(200,218,211, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(20,83,116, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.navbar-toggler{
+    top: 15px;
+    position: relative;
 }
 
 .nav-link-text{
@@ -198,7 +231,7 @@ main{
 }
 
 .shortNav {
-    display: none !important;
+    display: none;
 }
 
 .fullNav {
@@ -230,17 +263,6 @@ main{
     color: var(--tertiary-color);
     background-color: var(--secondary-color);
 }
- 
-@media screen and (max-width: 1024px) {
-    .shortNav {
-        display: inherit !important;
-    }
-
-    .fullNav {
-        display: none !important;
-    }
-}
-
 
 *:focus {
     border-color: inherit;

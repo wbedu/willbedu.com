@@ -1,0 +1,106 @@
+@import "../styles/colors.css";
+
+
+.c-timeline{
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    margin: auto    ;
+}
+.c-timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--secondary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* Container around content */
+.c-timeline-card {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+}
+
+/* left cards */
+
+.c-timeline-card:nth-child(odd)  {
+    left: 15%;
+}
+
+.c-timeline-card:nth-child(odd)::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: -15px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* right cards */
+.c-timeline-card:nth-child(even)  {
+    left: 75%;
+}
+
+c-timeline-card:After{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* The actual content */
+.content {
+    position: relative;
+}
+
+.c-timeline-card:nth-child(even)::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: -15px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.c-timeline-card:after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* The circles on the timeline */
+.c-timeline-card:nth-child(even)::after {
+    right: 147.1%;
+}
+
+/* The circles on the timeline */
+.c-timeline-card:nth-child(odd)::after {
+    left: 138.2%;
+}
