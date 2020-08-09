@@ -58,7 +58,7 @@ export default function Resume() {
                 Working on this page. Check back soon
             </p>
             <div className="c-timeline col-12">
-                {
+                {/*{
                     mockHistory.map((history, index) => {
                         return (
                             <HistoryCard{...history}> </HistoryCard>
@@ -70,7 +70,7 @@ export default function Resume() {
                         <h2>2017</h2>
                         <p>Lorem ipsum..</p>
                     </div>
-                </Card>
+                </Card>*/}
             </div>
         </main>
     )
